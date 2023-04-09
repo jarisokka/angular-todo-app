@@ -1,0 +1,17 @@
+<div class="container-sm p-2">
+  <form *ngIf="showAddTodo" (ngSubmit)="onSubmit()">
+    <div class="form-group col-md-6 mt-2">
+      <label for="todo">Your thing to Do</label>
+      <input type="text" class="form-control" name="text" [(ngModel)]="text" id="todo" placeholder="Enter your todo">
+    </div>
+    <div class="form-group col-md-6 mt-2">
+      <label for="time">Day and time</label>
+      <input type="text" class="form-control" name="day" [(ngModel)]="day" id="time" placeholder="Enter day and time">
+    </div>
+    <div class="form-check mt-2 mb-2">
+      <input type="checkbox" class="form-check-input" name="reminder" [(ngModel)]="reminder" id="reminder">
+      <label class="form-check-label" for="reminder">Set reminder on</label>
+    </div>
+    <button type="submit" class="btn btn-dark">Save Todo</button>
+  </form>
+</div>
